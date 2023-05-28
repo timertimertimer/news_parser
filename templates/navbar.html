@@ -1,0 +1,21 @@
+<a href="/">
+    <h1>News Parser</h1>
+</a>
+<div class="navbar-container">
+    <div>
+        <form method="GET" action="{% url 'home' %}">
+            <input type="text" name="q" placeholder="Search News..." />
+        </form>
+    </div>
+    <div>
+        <form
+            method="post"
+            action="{% url 'parse_articles' %}"
+            style="display: inline-block"
+        >
+            {% csrf_token %}
+            <button type="submit">Обновить БД</button>
+        </form>
+    </div>
+</div>
+<hr />

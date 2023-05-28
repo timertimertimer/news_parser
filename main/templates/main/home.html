@@ -1,0 +1,20 @@
+{% extends 'main.html' %} {% block content %}
+<div class="home-container">
+    {% include 'main/sources.html' %}
+
+    <div>
+        <h5>{{articles.count}} articles available</h5>
+        {% for article in articles %}
+        <div>
+            <span>{{article.source}}</span>
+            <h5>
+                {{article.id}} --
+                <a href="{% url 'article' article.id %}">{{article.title}}</a>
+            </h5>
+            <span>{{article.description}}</span>
+            <hr />
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

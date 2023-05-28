@@ -1,0 +1,11 @@
+{% extends 'main.html' %} {% block content %}
+<div class="home-container">
+    {% include 'main/sources.html' %}
+    <div>
+        <p>{{article.category}}</p>
+        <p>{{article.date}}</p>
+        <h1><a href="{{article.link}}">{{article.title}}</a></h1>
+        <p>{{article.text}}</p>
+    </div>
+</div>
+{% endblock %}

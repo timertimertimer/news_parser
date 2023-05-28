@@ -1,0 +1,10 @@
+.home-container {
+    background-color: #f6f6f6;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.navbar-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}

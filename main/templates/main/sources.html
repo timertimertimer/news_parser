@@ -1,0 +1,9 @@
+
+<div>
+    <h3>Источники</h3>
+    <hr />
+    <div><a href="{% url 'home' %}">All</a></div>
+    {% for source in sources %}
+    <div><a href="{% url 'home' %}?q={{source}}">{{source}}</a></div>
+    {% endfor %}
+</div>
